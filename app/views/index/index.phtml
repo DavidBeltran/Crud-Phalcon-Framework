@@ -1,12 +1,12 @@
 <!--Desarrollado por david beltrán-->
 <!doctype html>
-<html>
+<html lang="es">
     <head>
         <title>Crud Phalcon</title>
         <link rel="stylesheet" href="archivos/css/bootstrap.css"/>
         <link rel="stylesheet" href="archivos/font-awesome/css/font-awesome.min.css"/>
     </head>
-    <body ng-app="index-modulo" ng-controller="indexController as inc">
+    <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
                <a title="Crud Phalcon Framework" class="navbar-brand" href="#"><i class = "fa fa-desktop" ></i> CPHF</a>
@@ -22,19 +22,19 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="col-sm-6">
-                        <form ng-submit="inc.enviar()" method="POST" class="form-horizontal">
+                        <form method="POST" id="form-action" class="form-horizontal">
                             <fieldset>
                                 <legend><i class="fa fa-user"></i> Formulario</legend>
                                 <div class="form-group">
                                     <label class="col-sm-12">Ingrese su nombre:</label>
                                     <div class="col-sm-12">
-                                        <input ng-model="inc.data.nombre" placeholder="Ingrese su nombre" required type="text" name="nombre" class="form-control">
+                                        <input placeholder="Ingrese su nombre" required type="text" name="nombre" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-12">Ingrese su mensaje:</label>
                                     <div class="col-sm-12">
-                                        <textarea ng-model="inc.data.mensaje" placeholder="Ingrese su mensaje" required type="text" name="mensaje" class="form-control"></textarea>
+                                        <textarea placeholder="Ingrese su mensaje" required type="text" name="mensaje" class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -62,11 +62,7 @@
             </div>
         </div>
     </body>
-        <script src="archivos/js/angular.js"></script>
-        <script src="archivos/js/angular-animate.js"></script>
-        <script src="archivos/js/angular-touch.js"></script>
-        <script src="archivos/js/angular-sanitize.js"></script>
-        <script src="archivos/js/ui-bootstrap-tpls-1.2.4.js"></script>
-        <script src="archivos/js/index.js"></script>
+    <script src="archivos/js/jquery-2.1.1.js"></script>
+    <script src="archivos/js/bootstrap.min.js"></script>
+    <script src="archivos/js/index.js"></script>
 </html>
-

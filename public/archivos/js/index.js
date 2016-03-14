@@ -1,19 +1,22 @@
-var index = angular.module("index-modulo", ['ui.bootstrap']);
+$("#form-action").submit(function(e){
+    e.preventDefault();
+    $.enviar();
+});
 
-index.controller("indexController", ["$http", '$sce', indexController]);
-
-function indexController($http, $sce){
-    var inc = this;
-    
-    inc.data = {};
-    
-    inc.enviar = function(){
-    $http.post("registrar", inc.data)
-        .error(function(error){
-           console.log(error);
-        })
-        .success(function(resp){
-          console.log(resp);
-        });
-    }
+$.enviar =  function(){
+    var data = new FormData($("#form-action")[0]);
+    $.ajax({
+        url:'registrar',
+        data:data,
+        type:'POST',
+        cache:false,
+        contentType: false,
+        processData: false,
+        error:function(error){
+            console.log(error);
+        },
+        success: function (resp) {
+            console.log(resp);
+        }
+    });
 }

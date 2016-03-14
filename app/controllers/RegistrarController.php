@@ -1,12 +1,21 @@
 <?php
 
-use Phalcon\Mvc\Controller;
+use \Phalcon\Http\Request;
 
-class RegistrarController extends Controller
-{
+class RegistrarController extends ControllerBase
+{   
     public function indexAction(){
-        $nombre = count($this->request->getPost());
-        echo $nombre;
+        $request = new Request();
+        $resp = array(); 
+        if($request->isPost() && $this->request->isAjax()){
+            $nombre = $request->getPost("nombre");
+            $mensaje = $request->getPost("mensaje");
+            
+        }else{
+            $resp["sms"]=3;
+        }
+        
+        
     }
 
 }
