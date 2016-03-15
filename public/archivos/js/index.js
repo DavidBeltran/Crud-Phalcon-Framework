@@ -1,3 +1,7 @@
+$("document").ready(function(){
+   $.cargarChat(); 
+});
+
 $("#form-action").submit(function(e){
     e.preventDefault();
     $.enviar();
@@ -6,7 +10,7 @@ $("#form-action").submit(function(e){
 $.enviar =  function(){
     var data = new FormData($("#form-action")[0]);
     $.ajax({
-        url:'registrar',
+        url:'registrar/registrar',
         data:data,
         type:'POST',
         cache:false,
@@ -16,7 +20,12 @@ $.enviar =  function(){
             console.log(error);
         },
         success: function (resp) {
-            console.log(resp);
+            var resp = JSON.parse(resp);
+            $.cargarChat();
         }
     });
 }
+
+$.cargarChat = function(){
+    $("#mensajes").load("registrar/listar");
+} 
