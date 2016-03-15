@@ -1,5 +1,7 @@
 $("document").ready(function(){
-   $.cargarChat(); 
+    setInterval(function(){
+        $.cargarChat();
+    },3000);
 });
 
 $("#form-action").submit(function(e){
@@ -21,7 +23,6 @@ $.enviar =  function(){
         },
         success: function (resp) {
             var resp = JSON.parse(resp);
-            $.cargarChat();
         }
     });
 }

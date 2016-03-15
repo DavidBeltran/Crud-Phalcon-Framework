@@ -1,6 +1,6 @@
 <?php if (($resp != 0)) { ?>
-    <?php foreach ($resp as $value) { ?>
-        <div class="row">
+    <div class="row" <?php echo $overflow; ?>>
+        <?php foreach ($resp as $value) { ?>
             <div class='col-sm-12'>
                 <div class='col-sm-5'>
                     <div class = 'alert alert-info'> 
@@ -13,8 +13,8 @@
                     </div>
                 </div>    
             </div>
-        </div>        
-    <?php } ?>
+        <?php } ?>
+    </div>
 <?php } else { ?>    
     No hay Mensajes
 <?php } ?>    

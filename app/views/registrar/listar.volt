@@ -1,6 +1,6 @@
 {%if(resp!=0) %}
-    {% for value in resp %}
-        <div class="row">
+    <div class="row" {{overflow}}>
+        {% for value in resp %}
             <div class='col-sm-12'>
                 <div class='col-sm-5'>
                     <div class = 'alert alert-info'> 
@@ -13,8 +13,8 @@
                     </div>
                 </div>    
             </div>
-        </div>        
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% else %}    
     No hay Mensajes
 {% endif %}    

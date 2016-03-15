@@ -27,14 +27,16 @@ class RegistrarController extends ControllerBase
     
     public function listarAction(){
         $mensajes = Chat::getData();
-        $resp = "";
+        $resp = ""; $overflow = "";
         if(count($mensajes)>0){
+             $overflow = (count($mensajes)>5)?"style='overflow-y:scroll; height:300px;'" : "";
             $resp = $mensajes;
         }else{
             $resp = 0;
         }
          
         $this->view->resp = $resp;
+        $this->view->overflow = $overflow;
     }
 
 }

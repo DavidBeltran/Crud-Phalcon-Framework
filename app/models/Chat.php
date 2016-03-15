@@ -10,7 +10,7 @@ class Chat extends Model
     protected $fecha;
     
     public function getData(){
-        $sql = "SELECT chat.id, chat.nombre, chat.mensaje FROM chat";
+        $sql = "SELECT chat.id, chat.nombre, chat.mensaje FROM chat ORDER BY chat.id DESC";
         return $this->modelsManager->executeQuery($sql);
     }
     
