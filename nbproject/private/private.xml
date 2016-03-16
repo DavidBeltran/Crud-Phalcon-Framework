@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/var/www/html/Crud-Phalcon-Framework/public/archivos/js/index.js</file>
-            <file>file:/var/www/html/Crud-Phalcon-Framework/app/views/index/index.phtml</file>
-            <file>file:/var/www/html/Crud-Phalcon-Framework/app/controllers/RegistrarController.php</file>
-            <file>file:/var/www/html/Crud-Phalcon-Framework/app/models/Chat.php</file>
-            <file>file:/var/www/html/Crud-Phalcon-Framework/app/views/registrar/listar.phtml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
